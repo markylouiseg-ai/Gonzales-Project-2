@@ -33,13 +33,26 @@
   function toggleMobileNav() {
     if (!mobileNavToggleBtn) return;
 
-    document.body.classList.toggle("mobile-nav-active");
+    const isOpen = document.body.classList.toggle("mobile-nav-active");
     mobileNavToggleBtn.classList.toggle("bi-list");
     mobileNavToggleBtn.classList.toggle("bi-x");
+    mobileNavToggleBtn.setAttribute("aria-expanded", String(isOpen));
+    mobileNavToggleBtn.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation" : "Open navigation"
+    );
   }
 
   if (mobileNavToggleBtn) {
     mobileNavToggleBtn.addEventListener("click", toggleMobileNav);
+    document.addEventListener("keydown", function (event) {
+      if (
+        event.key === "Escape" &&
+        document.body.classList.contains("mobile-nav-active")
+      ) {
+        toggleMobileNav();
+      }
+    });
   }
 
   // Close mobile navigation after selecting a section
