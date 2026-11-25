@@ -1,0 +1,536 @@
+.events-page {
+  min-height: 100vh;
+}
+
+.events-page .header .brand-name {
+  display: inline-flex;
+  flex-direction: column;
+  color: var(--kcc-cream);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.events-page .header .brand-name small {
+  margin-top: 3px;
+  color: var(--kcc-gold);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.events-page .header .brand-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.life-events-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(72px, 11vw, 138px) 0 96px;
+  background:
+    radial-gradient(ellipse at 82% 18%, rgba(212, 175, 55, 0.17), transparent 34%),
+    linear-gradient(135deg, #080d18 0%, #101c32 62%, #172a46 100%);
+  border-bottom: 1px solid var(--kcc-border);
+}
+
+.life-events-hero::after {
+  position: absolute;
+  right: -120px;
+  bottom: -240px;
+  width: 520px;
+  height: 520px;
+  border: 1px solid rgba(212, 175, 55, 0.14);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.life-events-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.life-events-breadcrumb {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 38px;
+  padding: 0;
+  color: var(--kcc-muted);
+  font-size: 13px;
+  list-style: none;
+}
+
+.life-events-breadcrumb li + li::before {
+  padding-right: 10px;
+  color: var(--kcc-gold);
+  content: "/";
+}
+
+.life-events-breadcrumb a {
+  color: var(--kcc-cream);
+  text-decoration: none;
+}
+
+.life-events-hero .section-kicker,
+.life-events-heading .section-kicker {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--kcc-gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.life-events-hero h1 {
+  margin: 0;
+  color: var(--kcc-cream);
+  font-family: var(--heading-font);
+  font-size: clamp(48px, 8vw, 88px);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.life-events-hero h1 span {
+  color: var(--kcc-gold);
+}
+
+.life-events-hero p {
+  max-width: 610px;
+  margin: 20px 0 0;
+  color: var(--kcc-muted);
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.8;
+}
+
+.life-events-section {
+  padding: clamp(64px, 8vw, 104px) 0;
+  background:
+    radial-gradient(ellipse at 8% 12%, rgba(23, 42, 70, 0.42), transparent 42%),
+    var(--kcc-midnight);
+}
+
+.life-events-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 36px;
+  margin-bottom: 36px;
+}
+
+.life-events-heading h2 {
+  max-width: 640px;
+  margin: 0;
+  color: var(--kcc-cream);
+  font-family: var(--heading-font);
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.2;
+}
+
+.life-events-heading > p {
+  max-width: 380px;
+  margin: 0 0 3px;
+  color: var(--kcc-muted);
+  line-height: 1.8;
+}
+
+.life-event-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.life-event-filter {
+  min-height: 42px;
+  padding: 9px 16px;
+  border: 1px solid var(--kcc-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--kcc-text);
+  font: inherit;
+  font-size: 13px;
+  transition: color 180ms ease, background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.life-event-filter:hover,
+.life-event-filter:focus-visible,
+.life-event-filter.is-active {
+  border-color: var(--kcc-gold);
+  background: var(--kcc-gold);
+  color: var(--kcc-midnight);
+}
+
+.life-event-filter:hover {
+  transform: translateY(-2px);
+}
+
+.life-events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.life-event-card {
+  overflow: hidden;
+  border: 1px solid var(--kcc-border);
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(18, 33, 58, 0.96), rgba(11, 20, 36, 0.96));
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.17);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.life-event-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.55);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.27);
+}
+
+.life-event-cover {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1.45 / 1;
+  background: var(--kcc-navy);
+}
+
+.life-event-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 450ms ease;
+}
+
+.life-event-card:hover .life-event-cover img {
+  transform: scale(1.045);
+}
+
+.life-event-category {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  padding: 7px 11px;
+  border: 1px solid rgba(228, 196, 94, 0.35);
+  border-radius: 999px;
+  background: rgba(8, 13, 24, 0.82);
+  color: var(--kcc-gold-light);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  backdrop-filter: blur(8px);
+}
+
+.life-event-content {
+  padding: 22px 22px 20px;
+}
+
+.life-event-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 11px;
+  color: var(--kcc-gold-light);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.life-event-date i {
+  font-size: 14px;
+}
+
+.life-event-content h3 {
+  margin: 0 0 10px;
+  color: var(--kcc-cream);
+  font-family: var(--heading-font);
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.life-event-content p {
+  min-height: 72px;
+  margin: 0;
+  color: var(--kcc-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.life-event-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 18px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--kcc-gold-light);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.life-event-open i {
+  transition: transform 180ms ease;
+}
+
+.life-event-open:hover i {
+  transform: translateX(4px);
+}
+
+.life-event-open:focus-visible,
+.life-dialog-close:focus-visible,
+.life-photo-nav:focus-visible {
+  outline: 2px solid var(--kcc-gold-light);
+  outline-offset: 4px;
+}
+
+.life-events-empty,
+.life-events-note {
+  color: var(--kcc-muted);
+  text-align: center;
+}
+
+.life-events-empty {
+  padding: 42px 12px;
+}
+
+.life-events-note {
+  max-width: 760px;
+  margin: 42px auto 0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.life-event-dialog,
+.life-photo-dialog {
+  width: min(940px, calc(100% - 32px));
+  max-width: none;
+  max-height: min(88vh, 900px);
+  padding: 0;
+  overflow: auto;
+  border: 1px solid var(--kcc-border);
+  border-radius: 14px;
+  background: var(--kcc-midnight);
+  color: var(--kcc-text);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.6);
+}
+
+.life-event-dialog::backdrop,
+.life-photo-dialog::backdrop {
+  background: rgba(3, 7, 14, 0.86);
+  backdrop-filter: blur(7px);
+}
+
+.life-event-dialog-inner {
+  position: relative;
+  padding: clamp(22px, 5vw, 46px);
+}
+
+.life-dialog-close {
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  right: 14px;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--kcc-border);
+  border-radius: 50%;
+  background: rgba(8, 13, 24, 0.9);
+  color: var(--kcc-cream);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.life-dialog-close:hover {
+  border-color: var(--kcc-gold);
+  color: var(--kcc-gold-light);
+}
+
+.life-event-detail-header {
+  max-width: 740px;
+  padding-right: 30px;
+}
+
+.life-event-detail-header .section-kicker {
+  color: var(--kcc-gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.life-event-detail-header h2 {
+  margin: 10px 0;
+  color: var(--kcc-cream);
+  font-family: var(--heading-font);
+  font-size: clamp(29px, 5vw, 44px);
+}
+
+.life-event-detail-header time {
+  color: var(--kcc-gold-light);
+  font-size: 13px;
+}
+
+.life-event-detail-description {
+  margin: 18px 0 28px;
+  color: var(--kcc-muted);
+  line-height: 1.8;
+}
+
+.life-event-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.life-event-photo {
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid var(--kcc-border);
+  border-radius: 8px;
+  background: var(--kcc-navy);
+  cursor: zoom-in;
+}
+
+.life-event-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.25 / 1;
+  object-fit: cover;
+  transition: transform 250ms ease;
+}
+
+.life-event-photo:hover img {
+  transform: scale(1.04);
+}
+
+.life-photo-dialog {
+  position: relative;
+  width: min(1200px, calc(100% - 24px));
+  height: min(90vh, 900px);
+  max-height: 90vh;
+  overflow: hidden;
+  border: 0;
+  background: #05080e;
+}
+
+.life-photo-dialog figure {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 56px 66px 48px;
+  place-items: center;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 14px;
+}
+
+.life-photo-dialog img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.life-photo-dialog figcaption {
+  color: var(--kcc-cream);
+  font-size: 13px;
+  text-align: center;
+}
+
+.life-photo-nav {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  transform: translateY(-50%);
+  border: 1px solid rgba(228, 196, 94, 0.5);
+  border-radius: 50%;
+  background: rgba(8, 13, 24, 0.85);
+  color: var(--kcc-cream);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.life-photo-nav:hover {
+  background: var(--kcc-gold);
+  color: var(--kcc-midnight);
+}
+
+.life-photo-prev {
+  left: 12px;
+}
+
+.life-photo-next {
+  right: 12px;
+}
+
+.life-photo-nav:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+@media (max-width: 991px) {
+  .life-events-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .life-events-heading {
+    display: block;
+  }
+
+  .life-events-heading > p {
+    margin-top: 16px;
+  }
+
+  .life-events-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .life-event-cover {
+    aspect-ratio: 1.6 / 1;
+  }
+
+  .life-event-content p {
+    min-height: 0;
+  }
+
+  .life-event-photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .life-photo-dialog figure {
+    padding: 58px 42px 44px;
+  }
+
+  .life-photo-nav {
+    width: 38px;
+    height: 38px;
+  }
+
+  .life-photo-prev {
+    left: 5px;
+  }
+
+  .life-photo-next {
+    right: 5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .life-event-card,
+  .life-event-cover img,
+  .life-event-filter,
+  .life-event-photo img,
+  .life-event-open i {
+    transition: none;
+  }
+}

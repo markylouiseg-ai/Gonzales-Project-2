@@ -1,0 +1,1200 @@
+﻿/* =========================================================
+   KCC LANDING PAGE
+   MIDNIGHT NAVY + GOLD THEME
+   REFINED HERO LIGHTING + MOTION
+========================================================= */
+
+/* =========================================================
+   KCC MIDNIGHT NAVY + GOLD THEME
+========================================================= */
+
+:root {
+  /* BootstrapMade theme variables */
+  --background-color: #080d18;
+  --default-color: #ded4b5;
+  --heading-color: #eadcb1;
+  --accent-color: #d4af37;
+  --surface-color: #12213a;
+  --contrast-color: #080d18;
+  --nav-color: #ded4b5;
+  --nav-hover-color: #e4c45e;
+  --nav-mobile-background-color: #080d18;
+  --nav-dropdown-background-color: #101c32;
+  --nav-dropdown-color: #ded4b5;
+  --nav-dropdown-hover-color: #d4af37;
+
+  /* KCC palette */
+  --kcc-midnight: #080d18;
+  --kcc-navy: #101c32;
+  --kcc-blue: #172a46;
+  --kcc-gold: #d4af37;
+  --kcc-gold-light: #e4c45e;
+  --kcc-cream: #eadcb1;
+  --kcc-text: #ded4b5;
+  --kcc-muted: #b9ae8e;
+  --kcc-border: rgba(212, 175, 55, 0.2);
+  --kcc-card: rgba(18, 33, 58, 0.88);
+
+  --default-font: "DM Sans", sans-serif;
+  --heading-font: "Playfair Display", Georgia, serif;
+  --nav-font: "DM Sans", sans-serif;
+}
+
+.dark-background {
+  --background-color: var(--kcc-midnight);
+  --default-color: var(--kcc-text);
+  --heading-color: var(--kcc-cream);
+  --surface-color: var(--kcc-card);
+  --contrast-color: var(--kcc-midnight);
+}
+/* =========================================================
+   GENERAL
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--kcc-midnight);
+  color: var(--kcc-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--kcc-cream);
+}
+
+p {
+  color: var(--kcc-muted);
+}
+
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--kcc-gold-light);
+}
+
+section {
+  background-color: var(--kcc-midnight);
+}
+
+.section-title h2 {
+  color: var(--kcc-gold);
+  letter-spacing: 2px;
+}
+
+.section-title p {
+  color: var(--kcc-cream);
+}
+/* =========================================================
+   HEADER AND NAVIGATION
+========================================================= */
+
+.header {
+  background: rgba(8, 24, 39, 0.96);
+  border-bottom: 1px solid var(--kcc-border);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.18);
+}
+
+.header .logo img {
+  max-height: 48px;
+  margin-right: 10px;
+}
+
+.header .logo h1 {
+  color: var(--kcc-cream);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.header .logo span {
+  color: var(--kcc-gold);
+}
+
+.navmenu a,
+.navmenu a:focus {
+  color: var(--kcc-cream);
+  font-weight: 500;
+}
+
+.navmenu a:hover,
+.navmenu .active,
+.navmenu .active:focus {
+  color: var(--kcc-gold);
+}
+
+.navmenu a::before {
+  background-color: var(--kcc-gold);
+}
+
+.mobile-nav-toggle {
+  color: var(--kcc-cream);
+}/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn-get-started,
+.btn,
+.kcc-button {
+  background: var(--kcc-gold);
+  color: var(--kcc-midnight);
+  border: 1px solid var(--kcc-gold);
+  border-radius: 5px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-get-started:hover,
+.btn:hover,
+.kcc-button:hover {
+  background: transparent;
+  color: var(--kcc-gold);
+  border-color: var(--kcc-gold);
+  transform: translateY(-3px);
+}
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+#hero {
+  background-color: var(--kcc-midnight);
+  background-image:
+    linear-gradient(rgba(8, 13, 24, 0.08), rgba(8, 13, 24, 0.08)),
+    url("../img/hero-bg.webp");
+  background-position: center top;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero.kcc-hero {
+  min-height: 0;
+  padding: 0 0 44px;
+  align-items: flex-start;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 35%, rgba(212, 175, 55, 0.09), transparent 55%);
+  pointer-events: none;
+}
+
+.kcc-hero-inner {
+  width: 100%;
+  padding-top: 56.25vw;
+}
+
+.kcc-hero-bottom {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: 0;
+}
+
+.kcc-hero-bottom h2 {
+  color: var(--kcc-cream);
+  font-weight: 800;
+}
+
+.kcc-hero-bottom p {
+  color: var(--kcc-muted);
+}
+
+.kcc-hero-bottom .btn-get-started {
+  margin-top: 15px;
+}
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
+
+#about {
+  background: var(--kcc-navy);
+}
+
+.about-layout {
+  align-items: center;
+}
+
+.about-layout > .col-lg-6 {
+  min-width: 0;
+}
+
+.about-visual {
+  position: relative;
+}
+
+.about-visual-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--kcc-border);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+}
+
+.about-visual-frame img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+  }
+
+.about-visual-frame:hover img {
+  transform: scale(1.04);
+}
+
+.about-visual-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 18px;
+  background: rgba(8, 24, 39, 0.88);
+  border-left: 3px solid var(--kcc-gold);
+  border-radius: 5px;
+}
+
+.about-visual-caption h3 {
+  color: var(--kcc-gold);
+  margin-bottom: 5px;
+}
+
+.about-visual-caption p {
+  margin-bottom: 0;
+  color: var(--kcc-cream);
+}
+
+.about-points {
+  display: grid;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.about-points > div {
+  padding: 18px;
+  background: rgba(8, 24, 39, 0.55);
+  border: 1px solid var(--kcc-border);
+  border-radius: 8px;
+}
+
+.about-points h3 {
+  color: var(--kcc-gold);
+  }
+
+.about-points p {
+  margin-bottom: 0;
+}
+
+.about-discover-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  color: var(--kcc-gold);
+  font-weight: 700;
+}
+
+.about-discover-link:hover {
+  gap: 13px;
+  color: var(--kcc-gold-light);
+}
+
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 52px;
+}
+
+.mission-vision-card {
+  height: 100%;
+  padding: 28px 30px;
+  border: 1px solid var(--kcc-border);
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(18, 33, 58, 0.92), rgba(8, 13, 24, 0.75));
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.mission-vision-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--kcc-gold);
+}
+
+.mission-vision-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 16px;
+}
+
+.mission-vision-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  place-items: center;
+  border: 1px solid var(--kcc-border);
+  border-radius: 50%;
+  color: var(--kcc-gold);
+  font-size: 19px;
+}
+
+.mission-vision-heading h3 {
+  margin: 0;
+  color: var(--kcc-cream);
+  font-family: var(--heading-font);
+  font-size: 24px;
+}
+
+.mission-vision-card p {
+  margin: 0;
+  color: var(--kcc-muted);
+  line-height: 1.8;
+}
+
+/* =========================================================
+   WHY CHOOSE KCC / VALUE CARDS
+========================================================= */
+
+#why-kcc,
+#why-us {
+  background: var(--kcc-midnight);
+}
+
+.value-card {
+  height: 100%;
+  padding: 30px;
+  background: var(--kcc-card);
+  border: 1px solid var(--kcc-border);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--kcc-gold);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.value-card .icon {
+  color: var(--kcc-gold);
+  font-size: 35px;
+  margin-bottom: 18px;
+}
+
+.value-card h3 {
+  color: var(--kcc-cream);
+  font-size: 20px;
+}
+
+.value-card p {
+  color: var(--kcc-muted);
+}
+/* =========================================================
+   ACADEMIC PROGRAMS
+========================================================= */
+
+#programs,
+#courses {
+  background: var(--kcc-navy);
+}
+
+.program-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.program-card {
+  position: relative;
+  height: 100%;
+  padding: 30px;
+  overflow: hidden;
+  background: var(--kcc-card);
+  border: 1px solid var(--kcc-border);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--kcc-gold);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.program-card h3 {
+  color: var(--kcc-gold);
+  font-size: 22px;
+}
+.program-card p {
+  color: var(--kcc-muted);
+}
+
+.program-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  color: var(--kcc-gold);
+  font-weight: 700;
+}
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.section-kicker {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--kcc-gold);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  color: var(--kcc-cream);
+  font-family: var(--heading-font);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
+.section-heading span {
+  display: block;
+  color: var(--kcc-gold);
+}
+
+.about-main-heading span {
+  display: inline;
+}
+
+.campus-heading,
+.news-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 34px;
+}
+.campus-heading > p,
+.news-heading > p {
+  max-width: 420px;
+  margin-bottom: 6px;
+}
+/* =========================================================
+   CAMPUS LIFE GALLERY
+========================================================= */
+
+#campus-life {
+  background: var(--kcc-midnight);
+}
+
+.campus-gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  grid-template-rows: repeat(2, minmax(225px, 1fr));
+  gap: 20px;
+}
+
+.campus-photo {
+  position: relative;
+  overflow: hidden;
+  min-height: 250px;
+  margin: 0;
+  background: var(--kcc-navy);
+  border: 1px solid var(--kcc-border);
+  border-radius: 10px;
+}
+
+.campus-photo-large {
+  grid-row: span 2;
+  min-height: 490px;
+}
+
+.campus-photo img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.campus-photo:hover img {
+  transform: scale(1.07);
+}
+
+.campus-photo-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to top,
+    rgba(8, 24, 39, 0.95),
+    rgba(8, 24, 39, 0.05) 75%
+  );
+  pointer-events: none;
+}
+
+.campus-photo-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.campus-photo-link:hover {
+  color: inherit;
+}
+
+.campus-photo-link:focus-visible {
+  outline: 2px solid var(--kcc-gold-light);
+  outline-offset: -4px;
+}
+.campus-photo-content {
+  position: absolute;
+  z-index: 2;
+  bottom: 25px;
+  left: 25px;
+  right: 25px;
+  pointer-events: none;
+}
+
+.campus-photo-content h3 {
+  color: var(--kcc-cream);
+  font-size: 21px;
+  margin-bottom: 7px;
+}
+
+.campus-photo-content p {
+  color: var(--kcc-muted);
+  margin-bottom: 0;
+}
+
+.campus-photo-number {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  right: 20px;
+  color: var(--kcc-gold);
+  font-weight: 800;
+  pointer-events: none;
+}
+.campus-view-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 12px;
+  color: var(--kcc-gold-light);
+  font-size: 10px;
+  font-weight: 700;
+  opacity: 0.85;
+  transition: gap 0.3s ease, opacity 0.3s ease;
+}
+
+.campus-photo-link:hover .campus-view-link {
+  gap: 15px;
+  opacity: 1;
+}
+/* =========================================================
+   NEWS AND ANNOUNCEMENTS
+========================================================= */
+
+#news {
+  background: var(--kcc-navy);
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.news-grid article {
+  height: 100%;
+  overflow: hidden;
+  background: var(--kcc-card);
+  border: 1px solid var(--kcc-border);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.news-grid article:hover {
+  transform: translateY(-7px);
+  border-color: var(--kcc-gold);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.news-grid article img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.news-grid article:hover img {
+  transform: scale(1.04);
+}
+
+.news-grid article .news-content,
+.news-grid article .details {
+  padding: 22px;
+}
+
+.news-grid article h3,
+.news-grid article h4 {
+  color: var(--kcc-cream);
+}
+
+.news-grid article p {
+  color: var(--kcc-muted);
+}
+
+.news-grid article a {
+  color: var(--kcc-gold);
+  font-weight: 700;
+}
+
+
+.news-story {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100%;
+}
+
+.news-story-image {
+  height: 225px;
+  overflow: hidden;
+  background: var(--kcc-navy);
+}
+.news-story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-story-overlay {
+  display: none;
+}
+
+.news-story-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.news-story-content h3 {
+  margin: 12px 0;
+  color: var(--kcc-cream);
+  font-family: var(--heading-font);
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+.news-story-content p {
+  flex: 1;
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+.news-date {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  display: grid;
+  min-width: 58px;
+  padding: 8px 10px;
+  border: 1px solid var(--kcc-border);
+  border-radius: 6px;
+  background: rgba(8, 13, 24, 0.92);
+  color: var(--kcc-gold);
+  text-align: center;
+}
+
+.news-date strong {
+  color: var(--kcc-gold);
+  font-size: 1.1rem;
+}
+
+.news-date small {
+  color: var(--kcc-cream);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+}
+
+.news-category {
+  color: var(--kcc-gold);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.news-story-number {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  color: var(--kcc-gold);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.news-read-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  color: var(--kcc-gold);
+  font-size: 0.85rem;
+}
+
+.programs-footer,
+.campus-footer,
+.news-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 28px;
+  padding: 22px 24px;
+  border: 1px solid var(--kcc-border);
+  border-radius: 10px;
+  background: rgba(8, 13, 24, 0.55);
+}
+
+.programs-footer p,
+.campus-footer p,
+.news-bottom p {
+  margin: 0;
+}
+.programs-contact-link,
+.campus-footer h3 {
+  color: var(--kcc-gold);
+  font-weight: 700;
+}
+
+/* =========================================================
+   INQUIRY BANNER
+========================================================= */
+
+#inquiry,
+.inquiry-section,
+.inquiry-band {
+  background:
+    linear-gradient(
+      120deg,
+      rgba(8, 24, 39, 0.96),
+      rgba(23, 55, 80, 0.95)
+    );
+  border-top: 1px solid var(--kcc-border);
+  border-bottom: 1px solid var(--kcc-border);
+}
+#inquiry h2,
+.inquiry-section h2,
+.inquiry-band h2 {
+  color: var(--kcc-cream);
+}
+
+#inquiry p,
+.inquiry-section p,
+.inquiry-band p {
+  color: var(--kcc-muted);
+}
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+#contact {
+  background: var(--kcc-midnight);
+}
+
+#contact .info-item,
+#contact .php-email-form {
+  background: var(--kcc-card);
+  border: 1px solid var(--kcc-border);
+  border-radius: 10px;
+}
+
+#contact .info-item h3 {
+  color: var(--kcc-gold);
+}
+
+#contact .info-item p {
+  color: var(--kcc-muted);
+}
+#contact .info-item i {
+  color: var(--kcc-gold);
+}
+
+#contact input,
+#contact textarea {
+  background: rgba(8, 24, 39, 0.8);
+  color: var(--kcc-cream);
+  border: 1px solid var(--kcc-border);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: var(--kcc-gold);
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: var(--kcc-muted);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+  background: #06121e;
+  border-top: 1px solid var(--kcc-border);
+}
+
+.kcc-footer .footer-brand .brand-logo {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  object-fit: contain;
+}
+.footer h3,
+.footer h4 {
+  color: var(--kcc-gold);
+}
+
+.footer p,
+.footer li {
+  color: var(--kcc-muted);
+}
+
+.footer a {
+  color: var(--kcc-muted);
+}
+
+.footer a:hover {
+  color: var(--kcc-gold);
+}
+
+.footer .copyright {
+  border-top: 1px solid var(--kcc-border);
+  color: var(--kcc-muted);
+}
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.scroll-top {
+  background: var(--kcc-gold);
+  color: var(--kcc-midnight);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.scroll-top:hover {
+  background: var(--kcc-gold-light);
+  color: var(--kcc-midnight);
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+
+@media (max-width: 991px) {
+
+  .program-showcase {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .campus-heading,
+  .news-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .campus-gallery {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: repeat(2, minmax(200px, 1fr));
+  }
+  .campus-photo-large {
+    min-height: 420px;
+  }
+
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .header .logo h1 {
+    font-size: 18px;
+  }
+
+  .program-showcase,
+  .news-grid,
+  .campus-gallery,
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .campus-gallery {
+    grid-template-rows: auto;
+  }
+
+  .campus-photo-large {
+    grid-row: auto;
+    min-height: 260px;
+  }
+
+  .programs-footer,
+  .campus-footer,
+  .news-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .value-card {
+    padding: 24px;
+  }
+
+  .campus-photo {
+    min-height: 220px;
+  }
+
+  .campus-photo img {
+    min-height: 0;
+  }
+
+  .about-visual-caption {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    padding: 13px;
+  }
+
+  .about-visual-caption h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .logo img {
+    max-height: 38px;
+  }
+
+  .header .logo h1 {
+    font-size: 16px;
+  }
+
+  .section-title h2 {
+    font-size: 25px;
+  }
+
+  .campus-photo-content {
+    left: 17px;
+    right: 17px;
+    bottom: 17px;
+  }
+}
+/* =========================================================
+   ACCESSIBILITY
+   No custom intro animations.
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL COLOR OVERRIDES: NO WHITE PANELS
+========================================================= */
+
+.email-form .error-message,
+.email-form .sent-message {
+  color: var(--kcc-cream);
+}
+
+#contact .php-email-form,
+#contact .info-item,
+.value-card,
+.program-card,
+.news-grid article {
+  color: var(--kcc-text);
+}
+::selection {
+  background: var(--kcc-gold);
+  color: var(--kcc-midnight);
+}
+
+.news-story-content {
+  padding: clamp(22px, 2.5vw, 28px);
+}
+
+.programs-footer,
+.campus-footer,
+.news-bottom {
+  margin-top: clamp(24px, 3vw, 34px);
+  padding: clamp(19px, 2.2vw, 25px);
+}
+
+.inquiry-band {
+  padding: clamp(42px, 5vw, 62px) 0;
+}
+
+/* Unified soft gold hover treatment for interactive cards. */
+.value-card,
+.program-card,
+.news-grid article,
+.campus-photo {
+  transition:
+    transform 320ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    border-color 320ms ease,
+    box-shadow 320ms ease;
+}
+.value-card:hover,
+.program-card:hover,
+.news-grid article:hover,
+.campus-photo:hover {
+  transform: translateY(-5px);
+  border-color: rgba(228, 196, 94, 0.76);
+  box-shadow:
+    0 16px 38px rgba(0, 0, 0, 0.32),
+    0 0 22px rgba(212, 175, 55, 0.075);
+}
+
+.about-visual-frame img,
+.campus-photo img,
+.news-story-image img,
+.news-grid article img {
+  transition: transform 650ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.about-visual-frame:hover img,
+.campus-photo:hover img,
+.news-grid article:hover img {
+  transform: scale(1.045);
+}
+
+.about-point,
+.about-points > div {
+  transition:
+    border-color 280ms ease,
+    background-color 280ms ease,
+    transform 280ms ease;
+}
+
+.about-points > div:hover {
+  transform: translateX(4px);
+  border-color: rgba(228, 196, 94, 0.58);
+  background: rgba(16, 28, 50, 0.82);
+}
+
+.about-discover-link span,
+.news-read-link i,
+.programs-contact-link i {
+  display: inline-block;
+  transition: transform 260ms ease;
+}
+
+.about-discover-link:hover span,
+.news-read-link:hover i,
+.programs-contact-link:hover i {
+  transform: translateX(4px);
+}
+
+/* Keyboard users receive the same clear gold focus language. */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--kcc-gold-light);
+  outline-offset: 4px;
+}
+
+@media (max-width: 767px) {
+  .index-page main > .section {
+    padding-top: 66px;
+    padding-bottom: 66px;
+  }
+
+  #hero.kcc-hero {
+    padding-bottom: 36px;
+  }
+
+  .hero-actions {
+    gap: 10px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 290px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #hero.kcc-hero::before,
+  #hero .kcc-hero-bottom {
+    animation: none !important;
+  }
+
+  .value-card,
+  .program-card,
+  .news-grid article,
+  .campus-photo,
+  .about-visual-frame img,
+  .campus-photo img,
+  .news-story-image img,
+  .news-grid article img,
+  .about-points > div,
+  .hero-actions .btn {
+    transition: none !important;
+  }
+}
+
+/* =========================
+   DEVELOPER PROFILE LINK
+========================= */
+
+.developer-credit {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #9299A8;
+}
+
+.developer-credit a {
+  color: #D4AF37;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.developer-credit a:hover {
+  color: #F2D675;
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.55);
+}
+
+.developer-credit a i {
+  font-size: 11px;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore student experiences, campus celebrations, and academic events at Kabankalan Catholic College.">
+  <meta name="theme-color" content="#080d18">
+  <title>Life at KCC | Kabankalan Catholic College</title>
+
+  <link href="assets/img/kcc-logo.png" rel="icon" type="image/png">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/kcc-custom.css" rel="stylesheet">
+  <link href="assets/css/life-events.css" rel="stylesheet">
+</head>
+
+<body class="events-page">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-xl d-flex align-items-center">
+      <a href="index.html#hero" class="logo d-flex align-items-center me-auto" aria-label="Kabankalan Catholic College home">
+        <img src="assets/img/kcc-logo.png" alt="" class="brand-logo">
+        <span class="brand-name">Kabankalan Catholic College<small>Inc.</small></span>
+      </a>
+
+      <nav id="navmenu" class="navmenu" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#programs">Programs</a></li>
+          <li><a href="events.html" class="active" aria-current="page">Life at KCC</a></li>
+          <li><a href="index.html#news">News</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <button class="mobile-nav-toggle d-xl-none bi bi-list" type="button" aria-label="Toggle navigation"></button>
+      </nav>
+
+      <a class="btn-getstarted" href="index.html#contact">Inquire about KCC <i class="bi bi-arrow-up-right"></i></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="life-events-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb">
+          <ol class="life-events-breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Life at KCC</li>
+          </ol>
+        </nav>
+        <span class="section-kicker">Student experiences &amp; events</span>
+        <h1>Life at <span>KCC</span></h1>
+        <p>Discover the learning, service, creativity, and community that shape life at Kabankalan Catholic College.</p>
+      </div>
+    </section>
+
+    <section class="life-events-section" aria-labelledby="events-heading">
+      <div class="container">
+        <div class="life-events-heading">
+          <div>
+            <span class="section-kicker">From our community</span>
+            <h2 id="events-heading">Moments that bring us together.</h2>
+          </div>
+          <p>Explore stories from campus celebrations, student activities, and academic gatherings.</p>
+        </div>
+
+        <div id="event-filters" class="life-event-filters" aria-label="Filter events" role="group">
+          <button type="button" class="life-event-filter is-active" data-event-filter="all" aria-pressed="true">All experiences</button>
+        </div>
+
+        <div id="events-grid" class="life-events-grid" aria-live="polite"></div>
+        <p id="events-empty" class="life-events-empty" hidden>No events in this category yet.</p>
+
+        <p class="life-events-note">
+          Dates and descriptions reflect information currently published on this site. New event stories and photo collections are added to the static site files and deployed with the website.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer kcc-footer">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-6">
+          <a href="index.html#hero" class="logo d-flex align-items-center footer-brand" aria-label="KCC home">
+            <img src="assets/img/kcc-logo.png" alt="" class="brand-logo">
+            <span class="brand-name">Kabankalan Catholic College<small>Inc.</small></span>
+          </a>
+          <p class="footer-intro">A college community for learning, personal growth, and values formation.</p>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html#about">About KCC</a></li>
+            <li><a href="index.html#programs">Academic programs</a></li>
+            <li><a href="events.html">Life at KCC</a></li>
+            <li><a href="index.html#news">News &amp; announcements</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 footer-links">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="index.html#contact">Inquiries</a></li>
+            <li><a href="index.html#hero">Back to top <i class="bi bi-arrow-up-right"></i></a></li>
+          </ul>
+          <p class="footer-contact-note">Kabankalan City, Negros Occidental</p>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright text-center">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Kabankalan Catholic College, Inc.</strong> <span>All Rights Reserved</span></p>
+    </div>
+  </footer>
+
+  <dialog id="event-dialog" class="life-event-dialog" aria-labelledby="event-dialog-title">
+    <div class="life-event-dialog-inner">
+      <button type="button" class="life-dialog-close" data-close-event aria-label="Close event details"><i class="bi bi-x-lg"></i></button>
+      <div id="event-dialog-content"></div>
+    </div>
+  </dialog>
+
+  <dialog id="photo-dialog" class="life-photo-dialog" aria-label="Photo viewer">
+    <button type="button" class="life-dialog-close" data-close-photo aria-label="Close photo viewer"><i class="bi bi-x-lg"></i></button>
+    <button type="button" class="life-photo-nav life-photo-prev" data-photo-prev aria-label="Previous photo"><i class="bi bi-chevron-left"></i></button>
+    <figure>
+      <img id="lightbox-image" src="" alt="">
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+    <button type="button" class="life-photo-nav life-photo-next" data-photo-next aria-label="Next photo"><i class="bi bi-chevron-right"></i></button>
+  </dialog>
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/life-events.js"></script>
+</body>
+
+</html>
